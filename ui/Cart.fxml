@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Cart">
+   <children>
+      <ImageView fx:id="imgView" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="images/bg_1.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="600.0">
+         <menus>
+            <Menu fx:id="menutab1" mnemonicParsing="false">
+               <graphic>
+                  <Label fx:id="menu_lbl" />
+               </graphic>
+            </Menu>
+            <Menu fx:id="menuTab2" mnemonicParsing="false">
+               <graphic>
+                  <Button fx:id="menu_back" mnemonicParsing="false" onAction="#backToStore" text="Back" />
+               </graphic></Menu>
+         </menus>
+      </MenuBar>
+      <TextArea fx:id="cart_txt" layoutX="200.0" layoutY="104.0" prefHeight="200.0" prefWidth="200.0" />
+      <Text fx:id="cart_logo" layoutX="141.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SHOPPING - CART">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Line fx:id="line1" endX="375.0" layoutX="225.0" layoutY="40.0" startX="-225.0" />
+      <Line fx:id="line2" endX="375.0" endY="13.5" layoutX="225.0" layoutY="76.0" startX="-225.0" startY="13.5" />
+      <Text fx:id="totalprice_txt" layoutX="200.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Price :" />
+      <Label fx:id="totalcartPrice_lbl" layoutX="274.0" layoutY="314.0" />
+      <Button fx:id="Buy_btn" layoutX="360.0" layoutY="309.0" mnemonicParsing="false" onAction="#But_btn" text="Buy" />
+      <TextField fx:id="addId_txt" layoutX="24.0" layoutY="132.0" promptText="Enter Item ID to add" />
+      <Text fx:id="Add_logo" layoutX="78.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD Item" />
+      <Button fx:id="addItem_btn" layoutX="82.0" layoutY="200.0" mnemonicParsing="false" onAction="#AddItem_btn" text="ADD" />
+      <TextField fx:id="removeId_txt" layoutX="425.0" layoutY="132.0" promptText="Enter Item ID to remove" />
+      <Text fx:id="remove_logo" layoutX="471.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REMOVE Item" />
+      <Button fx:id="removeId_btn" layoutX="471.0" layoutY="200.0" mnemonicParsing="false" onAction="#RemoveId_btn" text="REMOVE" />
+      <ComboBox fx:id="comboAdd" layoutX="29.0" layoutY="166.0" prefWidth="150.0" promptText="choose Item" />
+      <ComboBox fx:id="comboDelete" layoutX="430.0" layoutY="166.0" prefWidth="150.0" promptText="choose Item" />
+   </children>
+</AnchorPane>

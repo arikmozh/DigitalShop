@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<AnchorPane fx:id="anchorPane_anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Shop">
+   <children>
+      <ImageView fx:id="imageView_img" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="images/bg_1.jpg" />
+         </image>
+      </ImageView>
+  <MenuBar fx:id="menuBar_menu" prefHeight="29.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="menuLogin_menu" mnemonicParsing="false" text="Login">
+            <items>
+              <MenuItem fx:id="menuItemSignIn_menu" mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="menuSignIn_btn" mnemonicParsing="false" onAction="#signIn" text="Sign in" />
+                     </graphic></MenuItem>
+                  <MenuItem fx:id="menuItemSignUp_menu" mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="menuSignUp_btn" mnemonicParsing="false" onAction="#signUp" text="Sign up" />
+                     </graphic></MenuItem>
+            </items>
+          </Menu>
+          <Menu fx:id="menuCart_menu" mnemonicParsing="false" text="Cart" />
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tabPane_tab" layoutY="29.0" prefHeight="378.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabShirts_tab" text="Shirts">
+            <content>
+              <AnchorPane fx:id="ShirtsPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="shirtsGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="shirtsGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShirts_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shirtsGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShirts_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shirtsGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShirts_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shirtsGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCart_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shirtsGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShirts_btn5" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shirtsGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShirts_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shirtsGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShirts_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shirtsGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShirts_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shirtsGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="shirtsImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Shirt_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shirtsDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shirtDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shirtsPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shirtsPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShirts_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShirts_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="shirtsGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllShirts_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllShirts" text="Show all Shirts" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabTShirts_tab" text="Tshirts">
+               <content>
+                  <AnchorPane fx:id="TshirtsPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="TshirtsGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="TshirtsGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="TshirtsGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="TshirtsGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="TshirtsGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="TshirtsGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn5" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="TshirtsGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="TshirtsGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="TshirtsGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="TshirtsGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="TshirtsImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Tshirt_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="TshirtsDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="TshirtDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="TshirtsPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="TshirtsPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTshirt_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTshirt_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="TshirtsGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllTShirts_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllTShirts" text="Show all TShirts" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabHoodies_tab" text="Hoodies">
+               <content>
+                  <AnchorPane fx:id="HoodiesPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="hoodiesGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="hoodiesGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="hoodiesGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="hoodiesGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="hoodiesGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="hoodiesGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn5" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="hoodiesGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="hoodiesGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="hoodiesGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="hoodiesGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="hoodiesImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Hoodie_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="hoodiesDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="hoodiesDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="hoodiesPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="hoodiesPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartHoodies_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="hoodiesGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllHoodies_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllHoodies" text="Show all Hoodies" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabJackets_tab" text="Jackets">
+               <content>
+                  <AnchorPane fx:id="JacketsPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="jacketsGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="jacketsGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJackets_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jacketsGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJackets_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jacketsGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJackets_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jacketsGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJackets_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jacketsGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jacketsGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJackets_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jacketsGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartHoodies_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jacketsGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJackets_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jacketsGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="jacketsImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jacket_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jacketsDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jacketsDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jacketsPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jacketsPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJackets_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJackets_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="JacketsGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllJackets_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllJackets" text="Show all Jackets" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabTrousers_tab" text="Trousers">
+               <content>
+                  <AnchorPane fx:id="TrousersPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="trousersGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="trousersGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTrousers_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="trousersGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTrousers_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="trousersGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTrousers_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="trousersGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTrousers_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="trousersGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="trousersGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTrousers_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="trousersGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTrousers_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="trousersGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTrousers_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="trousersGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="trousersImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Trousers_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="trousersDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="trousersDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="trousersPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="trousersPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartTrousers_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartTrousers_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="TrousersGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllTrousers_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllTrousers" text="Show all Trousers" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabShorts_tab" text="Shorts">
+               <content>
+                  <AnchorPane fx:id="ShortsPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="shortsGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="shortsGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shortsGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shortsGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shortsGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shortsGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn5" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shortsGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shortsGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shortsGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="shortsGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="shortsImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Short_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="shortsDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="shortsDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="shortsPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="shortsPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartShorts_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="shortsGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllShorts_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllShorts" text="Show all Shorts" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabJeans_tab" text="Jeans">
+               <content>
+                  <AnchorPane fx:id="JeansPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="jeansGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="jeansGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJeans_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jeansGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJeans_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jeansGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJeans_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jeansGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartShorts_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jeansGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJeans_btn5" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jeansGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJeans_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jeansGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJeans_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jeansGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJeans_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="jeansGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="jeansImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Jeans_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="jeansDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="jeansDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="jeansPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="jeansPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartJeans_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartJeans_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="jeansGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllJeans_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllJeans" text="Show all Jeanses" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabUnderweare_tab" text="Underwear">
+               <content>
+                  <AnchorPane fx:id="UnderwearePane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="underweareGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="underweareGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="underweareGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="underweareGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="underweareGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="underweareGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn5" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="underweareGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="underweareGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="underweareGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="underweareGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="underweareImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Underwear_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="underweareDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="underweareDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="underwearePrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="underwearePrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartUnderweare_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartUnderweare_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="underweareGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllUnderweare_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllUnderweare" text="Show all Underwear" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabLoungwear_tab" text="Loungwear">
+               <content>
+                  <AnchorPane fx:id="LoungwearPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="loungwearGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="loungwearGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loungwearGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loungwearGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loungwearGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loungwearGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn5" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loungwearGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loungwearGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loungwearGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="loungwearGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="loungwearImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Loungewear_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="loungwearDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="loungwearDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="loungwearPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="loungwearPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartLoungwear_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartLoungwear_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="loungwearGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllLoungwear_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllLoungwear" text="Show all Loungwear" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabSocks_tab" text="Socks">
+               <content>
+                  <AnchorPane fx:id="SocksPane_anchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane fx:id="socksGrid_grid" gridLinesVisible="true" layoutX="20.0" layoutY="7.0" prefHeight="299.0" prefWidth="560.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane fx:id="socksGridAnchor1" prefHeight="122.0" prefWidth="182.0">
+                                 <children>
+                                    <ImageView fx:id="socksImgView1_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_Black.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl1" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_txt1" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl1" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt1" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn1" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn1" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="socksGridAnchor2" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <ImageView fx:id="socksImgView2_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_Blue.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl2" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_text2" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl2" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt2" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn2" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn2" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="socksGridAnchor3" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <ImageView fx:id="socksImgView3_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_Brown.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl3" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_text3" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl3" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt3" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn3" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn3" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="socksGridAnchor4" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="socksImgView4_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_Grey.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl4" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_text4" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl4" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt4" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn4" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn4" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="socksGridAnchor5" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="socksImgView5_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_Orange.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl5" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_text5" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl5" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt5" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn5" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn5" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="socksGridAnchor6" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <ImageView fx:id="socksImgView6_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_Pink.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl6" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_text6" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl6" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt6" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn6" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn6" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="socksGridAnchor7" prefHeight="122.0" prefWidth="182.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="socksImgView7_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_Red.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl7" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_text7" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl7" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt7" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn7" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn7" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="socksGridAnchor8" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="socksImgView8_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_White.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl8" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_text8" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl8" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt8" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn8" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn8" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="socksGridAnchor9" prefHeight="122.0" prefWidth="182.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <children>
+                                    <ImageView fx:id="socksImgView9_img" fitHeight="100.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="images/Socks_Yellow.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="socksDesc_lbl9" layoutX="96.0" layoutY="31.0" />
+                                    <Text fx:id="socksDesc_text9" layoutX="96.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" />
+                                    <Label fx:id="socksPrice_lbl9" layoutX="149.0" layoutY="50.0" />
+                                    <Text fx:id="socksPrice_txt9" layoutX="95.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price" />
+                                    <Button fx:id="addToCartSocks_btn9" layoutX="94.0" layoutY="71.0" mnemonicParsing="false" onAction="#addToCartSocks_btn9" text="Add to cart" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <Label fx:id="socksGeneralLable_lbl" layoutX="270.0" layoutY="306.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="showAllSocks_btn" layoutX="20.0" layoutY="308.0" mnemonicParsing="false" onAction="#showAllSocks" text="Show all Socks" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

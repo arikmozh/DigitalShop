@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AllClothes">
+   <children>
+      <ImageView fx:id="imgview_img" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="images/bg_1.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar fx:id="menuBar_menu" prefHeight="29.0" prefWidth="600.0">
+         <menus>
+            <Menu fx:id="menuLogin_menu" mnemonicParsing="false" text="Login">
+               <items>
+                  <MenuItem fx:id="menuItemLogin" mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#loginBTN" text="Sign in" />
+                     </graphic></MenuItem>
+                  <MenuItem fx:id="menuItemSignUp" mnemonicParsing="false">
+                     <graphic>
+                        <Button fx:id="signUpBtn" mnemonicParsing="false" onAction="#SignUpBTN" text="Sign up" />
+                     </graphic></MenuItem>
+               </items>
+            </Menu>
+            <Menu fx:id="menuItem3" mnemonicParsing="false">
+               <graphic>
+                  <Button fx:id="backToStore_btn" mnemonicParsing="false" onAction="#backToStore_btn" text="Back to store" />
+               </graphic></Menu>
+         </menus>
+      </MenuBar>
+      <TabPane fx:id="tabPane" layoutY="29.0" prefHeight="378.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="shirtsTab" text="Shirts">
+               <content>
+                  <AnchorPane fx:id="shirtsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="shirts_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="shirts_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tshirtsTab" text="T shirts">
+               <content>
+                  <AnchorPane fx:id="tshirtsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="tshirts_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="tshirts_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="hoodiesTab" text="Hoodies">
+               <content>
+                  <AnchorPane fx:id="hoodiesAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="hoodies_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="hoodies_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="jacketsTab" text="Jackets">
+               <content>
+                  <AnchorPane fx:id="jacketsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="jackets_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="jackets_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="trousersTab" text="Trousers">
+               <content>
+                  <AnchorPane fx:id="trousersAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="trousers_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="trousers_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="shortsTab" text="Shorts">
+               <content>
+                  <AnchorPane fx:id="shortsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="shorts_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="shorts_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="jeansTab" text="Jeans">
+               <content>
+                  <AnchorPane fx:id="jeansAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="jeans_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="jeans_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="underwearTab" text="Underweare">
+               <content>
+                  <AnchorPane fx:id="underwearAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="underwear_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="underwear_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="loungwearTab" text="Loungewear">
+               <content>
+                  <AnchorPane fx:id="loungwearAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="loung_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="lounge_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="socksTab" text="Socks">
+               <content>
+                  <AnchorPane fx:id="socksAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="socks_lbl" layoutX="185.0" layoutY="226.0" text="Login to buy">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="socks_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

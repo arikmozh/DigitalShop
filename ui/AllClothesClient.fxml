@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AllClothesClient">
+   <children>
+      <ImageView fx:id="imgView" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="images/bg_1.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="600.0">
+         <menus>
+            <Menu fx:id="menu_menu" mnemonicParsing="false">
+               <graphic>
+                  <Label fx:id="menu_lbl" />
+               </graphic>
+            </Menu>
+            <Menu fx:id="menu2_menu" mnemonicParsing="false">
+               <graphic>
+                  <Button fx:id="back_btn" mnemonicParsing="false" onAction="#backToStore" text="Back to Store" />
+               </graphic></Menu>
+            <Menu fx:id="menu3_menu" mnemonicParsing="false">
+               <graphic>
+                  <Button fx:id="cart_btn" mnemonicParsing="false" onAction="#goToCart" text="Cart" />
+               </graphic></Menu>
+         </menus>
+      </MenuBar>
+      <TabPane fx:id="TabPane" layoutY="29.0" prefHeight="378.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="shirtsTab" text="Shirts">
+               <content>
+                  <AnchorPane fx:id="shirtsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="shirtsAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addShirt_btn" text="ADD" />
+                        <Label fx:id="shirt_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="shirt_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="shirt_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tshirtsTab" text="T shirts">
+               <content>
+                  <AnchorPane fx:id="tshirtAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="tshirtAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addTshirt_btn" text="ADD" />
+                        <Label fx:id="tshirt_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="tshirt_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="tshirt_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="hoodiesTab" text="Hoodies">
+               <content>
+                  <AnchorPane fx:id="hoodieAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="hoodieAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addHoodie_btn" text="ADD" />
+                        <Label fx:id="hoodie_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="hoodie_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="hoodie_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="jacketsTab" text="Jackets">
+               <content>
+                  <AnchorPane fx:id="jacketAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="jacketAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addJacket_btn" text="ADD" />
+                        <Label fx:id="jacket_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="jacket_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="jacket_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="trousersTab" text="Trousers">
+               <content>
+                  <AnchorPane fx:id="trousersAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="trouserAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addTrouser_btn" text="ADD" />
+                        <Label fx:id="trouser_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="trouser_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="trouser_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="shortsTab" text="Shorts">
+               <content>
+                  <AnchorPane fx:id="shortsAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="shortAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addShort_btn" text="ADD" />
+                        <Label fx:id="short_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="short_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="short_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="jeansTab" text="Jeans">
+               <content>
+                  <AnchorPane fx:id="jeansAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="jeansAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addJeans_btn" text="ADD" />
+                        <Label fx:id="jeans_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="jeans_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="jeans_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="underwearTab" text="Underweare">
+               <content>
+                  <AnchorPane fx:id="underwearAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="underAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addUnderwear_btn" text="ADD" />
+                        <Label fx:id="under_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="under_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="under_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="loungwearTab" text="Loungewear">
+               <content>
+                  <AnchorPane fx:id="loungwearAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="loungeAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addLoungewear_btn" text="ADD" />
+                        <Label fx:id="lounge_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="lounge_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="lounge_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="socksTab" text="Socks">
+               <content>
+                  <AnchorPane fx:id="socksAnchor" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="socksAdd_btn" layoutX="277.0" layoutY="228.0" mnemonicParsing="false" onAction="#addSocks_btn" text="ADD" />
+                        <Label fx:id="socks_lbl" layoutX="185.0" layoutY="226.0">
+                           <font>
+                              <Font size="26.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="socks_txt" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="570.0" />
+                        <TextField fx:id="socks_id" layoutX="14.0" layoutY="228.0" prefHeight="27.0" prefWidth="139.0" promptText="Enter ID to add to cart" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

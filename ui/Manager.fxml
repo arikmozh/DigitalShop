@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Manager">
+   <children>
+      <MenuBar fx:id="menubar" prefHeight="29.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="menu" mnemonicParsing="false">
+               <graphic>
+                  <Button fx:id="backtologin_btn" mnemonicParsing="false" onAction="#backtoLogin_btn" text="Back to login" />
+               </graphic></Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tabPane" layoutY="29.0" prefHeight="373.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="userTab" text="User's">
+               <content>
+                  <SplitPane fx:id="split1" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                    <items>
+                      <AnchorPane fx:id="userAnchor1" minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="239.0">
+                           <children>
+                              <Text fx:id="addClient_txt" layoutX="119.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Client" />
+                              <TextField fx:id="Cname_txt" layoutX="31.0" layoutY="30.0" prefHeight="27.0" prefWidth="90.0" promptText="C. name" />
+                              <TextField fx:id="Cyear_txt" layoutX="161.0" layoutY="30.0" prefHeight="27.0" prefWidth="90.0" promptText="C. birth year" />
+                              <TextField fx:id="Cphone_txt" layoutX="31.0" layoutY="69.0" prefHeight="27.0" prefWidth="90.0" promptText="C. phone" />
+                              <Button fx:id="addC_btn" layoutX="184.0" layoutY="69.0" mnemonicParsing="false" onAction="#addC_btn" text="ADD" />
+                              <Text fx:id="editClient_txt" layoutX="119.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Client" />
+                              <TextField fx:id="edtCname_txt" layoutX="31.0" layoutY="206.0" prefHeight="27.0" prefWidth="90.0" promptText="C. name" />
+                              <TextField fx:id="edtCyear_txt" layoutX="31.0" layoutY="246.0" prefHeight="27.0" prefWidth="90.0" promptText="C. birth year" />
+                              <TextField fx:id="edtCphone_txt" layoutX="161.0" layoutY="206.0" prefHeight="27.0" prefWidth="90.0" promptText="C. phone" />
+                              <Button fx:id="edtC_btn" layoutX="184.0" layoutY="246.0" mnemonicParsing="false" onAction="#editC_btn" text="EDIT" />
+                              <Text fx:id="enterId_txt" layoutX="120.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Id C" />
+                              <TextField fx:id="id_txt" layoutX="103.0" layoutY="170.0" prefHeight="27.0" prefWidth="90.0" promptText="Id" />
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane fx:id="userAnchor2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Text fx:id="Show_txt" layoutX="95.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick User's to show" />
+                              <TextArea fx:id="show_txt" layoutX="48.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+                              <ComboBox fx:id="combo_combo" layoutX="73.0" layoutY="30.0" prefWidth="150.0" />
+                              <Button fx:id="show_btn" layoutX="120.0" layoutY="65.0" mnemonicParsing="false" onAction="#show_btn" text="SHOW" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+          <Tab fx:id="clothTab" text="Clothes">
+               <content>
+                  <SplitPane fx:id="clothSplitPane" dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
+                     <items>
+                        <AnchorPane fx:id="clothAnchor1" minHeight="0.0" minWidth="0.0" prefHeight="340.0" prefWidth="239.0">
+                           <children>
+                              <Text fx:id="addItem_txt" layoutX="29.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Item" />
+                              <TextField fx:id="AdditemDesc_txt" layoutX="196.0" layoutY="30.0" prefHeight="27.0" prefWidth="90.0" promptText="Description" />
+                              <TextField fx:id="AddpriceItem_txt" layoutX="196.0" layoutY="70.0" prefHeight="27.0" prefWidth="90.0" promptText="Price" />
+                              <Button fx:id="clothAdd_btn" layoutX="219.0" layoutY="106.0" mnemonicParsing="false" onAction="#clothAdd_btn" text="ADD" />
+                              <Text fx:id="edtItem_txt" layoutX="30.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Item" />
+                              <TextField fx:id="editDesc_txt" layoutX="196.0" layoutY="164.0" prefHeight="27.0" prefWidth="90.0" promptText="Description" />
+                              <TextField fx:id="editPrice_txt" layoutX="196.0" layoutY="200.0" prefHeight="27.0" prefWidth="90.0" promptText="Price" />
+                              <Button fx:id="ClothEdit_btn" layoutX="219.0" layoutY="236.0" mnemonicParsing="false" onAction="#ClothEdit_btn" text="EDIT" />
+                              <TextField fx:id="edtId_txt" layoutX="11.0" layoutY="200.0" prefHeight="27.0" prefWidth="90.0" promptText="Id" />
+                              <ComboBox fx:id="addItemCombo" layoutX="11.0" layoutY="30.0" prefHeight="27.0" prefWidth="90.0" promptText="Pick Item" />
+                              <ComboBox fx:id="addColorCombo" layoutX="11.0" layoutY="65.0" prefHeight="27.0" prefWidth="90.0" promptText="Color" />
+                              <ComboBox fx:id="addSizeCombo" layoutX="11.0" layoutY="102.0" prefHeight="27.0" prefWidth="90.0" promptText="Size" />
+                              <ComboBox fx:id="editItemCombo" layoutX="11.0" layoutY="164.0" prefHeight="27.0" prefWidth="90.0" promptText="Pick Item" />
+                              <ComboBox fx:id="editColorCombo" layoutX="10.0" layoutY="236.0" prefHeight="27.0" prefWidth="90.0" promptText="Color" />
+                              <ComboBox fx:id="editSizeCombo" layoutX="10.0" layoutY="273.0" prefHeight="27.0" prefWidth="90.0" promptText="Size" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="clothAnchor2" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <Text fx:id="ClothPickItem_txt" layoutX="95.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pick Item to show" />
+                              <TextArea fx:id="clothShow_area" layoutX="48.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" />
+                              <ComboBox fx:id="ClothPick_combo" layoutX="73.0" layoutY="30.0" prefWidth="150.0" />
+                              <Button fx:id="ClothShow_btn" layoutX="120.0" layoutY="65.0" mnemonicParsing="false" onAction="#ClothShow_btn" text="SHOW" />
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </content></Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
